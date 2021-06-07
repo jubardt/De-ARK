@@ -13,7 +13,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with Simple Dice.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.example.myapplication.simpledice;
+package com.example.myapplication.simpledice.Activity;
 
 import android.app.Activity;
 import android.content.res.Resources;
@@ -47,7 +47,7 @@ public class RollDice extends Activity implements SensorEventListener {
 	private int diceSum;
 	private int roll[] = new int[] { 6, 6 };
 	private ImageView die1;
-	private ImageView die2;
+	//private ImageView die2;
 	private LinearLayout diceContainer;
         private SensorManager sensorMgr; 
 	private Handler animationHandler;
@@ -79,11 +79,11 @@ public class RollDice extends Activity implements SensorEventListener {
 			}
 		});
 		die1 = (ImageView) findViewById(R.id.die1);
-		die2 = (ImageView) findViewById(R.id.die2);
+		//die2 = (ImageView) findViewById(R.id.die2);
 		animationHandler = new Handler() {
 			public void handleMessage(Message msg) {
 				die1.setImageDrawable(dice[roll[0]]);
-				die2.setImageDrawable(dice[roll[1]]);
+				//die2.setImageDrawable(dice[roll[1]]);
 			}
 		};
 		sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
