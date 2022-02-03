@@ -49,7 +49,7 @@ public class RollDice extends Activity implements SensorEventListener {
 	private ImageView die1;
 	//private ImageView die2;
 	private LinearLayout diceContainer;
-        private SensorManager sensorMgr; 
+	private SensorManager sensorMgr;
 	private Handler animationHandler;
 	private long lastUpdate = -1;
 	private float x, y, z;
